@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
 <div class="container-wrapper">
@@ -74,5 +74,7 @@
         <input type="submit" value="submit" class="btn btn-default">
         <a href="<c:url value="/admin/productInventory" /> " class="btn btn-default">Cancel</a>
         </form:form>
+
+
 <%@include file="/WEB-INF/views/template/footer.jsp" %>
 
