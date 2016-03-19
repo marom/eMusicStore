@@ -29,3 +29,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.login-box {
+    width: 40%;
+    margin: auto;
+    margin-top: 100px;
+}
