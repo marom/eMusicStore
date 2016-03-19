@@ -58,6 +58,24 @@ public class Cart {
             cartItems.put(productId, cartItem);
         }
 
-        //updateGrandTotal;
+        updateGrandTotal();
+    }
+
+    public void removeCardItem(CartItem item) {
+
+        String productId = item.getProduct().getProductId();
+        cartItems.remove(productId);
+
+        updateGrandTotal();
+    }
+
+    private void updateGrandTotal() {
+
+        grandTotal = 0;
+
+        for (CartItem item : cartItems.values()) {
+            grandTotal = grandTotal + item.getTotalPrice();
+        }
+
     }
 }
