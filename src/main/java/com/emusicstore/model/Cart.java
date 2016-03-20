@@ -53,6 +53,7 @@ public class Cart {
         if (cartItems.containsKey(productId)) {
             CartItem existingCartItem = cartItems.get(productId);
             existingCartItem.setQuantity(existingCartItem.getQuantity() + cartItem.getQuantity());
+            existingCartItem.setTotalPrice(existingCartItem.getTotalPrice() + cartItem.getTotalPrice());
             cartItems.put(productId, existingCartItem);
         } else {
             cartItems.put(productId, cartItem);
@@ -61,7 +62,7 @@ public class Cart {
         updateGrandTotal();
     }
 
-    public void removeCardItem(CartItem item) {
+    public void removeCartItem(CartItem item) {
 
         String productId = item.getProduct().getProductId();
         cartItems.remove(productId);

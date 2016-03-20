@@ -1,4 +1,3 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: maro
@@ -6,7 +5,8 @@
   Time: 17:08
   To change this template use File | Settings | File Templates.
 --%>
-<%@include file="/WEB-INF/views/template/header.jsp"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@include file="/WEB-INF/views/template/header.jsp" %>
 
 <div class="container-wrapper">
     <div class="container">
@@ -14,21 +14,24 @@
             <div class="jumbotron">
                 <div class="container">
                     <h1>Cart</h1>
-                    <p>All the selected product in your shopping bag.</p>
+
+                    <p>All the selected products in your shopping cart</p>
                 </div>
             </div>
         </section>
 
         <section class="container" ng-app="cartApp">
-            <div ng-controller = "cartCtrl" ng-init="initCartid('${cartId}')">
+            <div ng-controller = "cartCtrl" ng-init="initCartId('${cartId}')">
                 <div>
-                    <a class="btn btn-danger pull-left"><span class="glyphicon glyphicon-remove-sign"></span>Clear Cart</a>
+                    <a class="btn btn-danger pull-left" ng-click="clearCart()"><span
+                            class="glyphicon glyphicon-remove-sign"></span>Clear Cart</a>
+                    <br><br>
                 </div>
 
-                <div class="table table-hover">
+                <table class="table table-hover">
                     <tr>
                         <th>Product</th>
-                        <th>Unit price</th>
+                        <th>Unit Price</th>
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Action</th>
@@ -39,21 +42,24 @@
                         <td>{{item.quantity}}</td>
                         <td>{{item.totalPrice}}</td>
                         <td><a href="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)">
-                            <span class="glyphicon glyphicon-remove"></span>Remove</a></td>
+                            <span class="glyphicon glyphicon-remove"></span>remove</a></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td>Grand total:</td>
-                        <td>fake 456.67</td>
-                        <td></td>
+                        <th></th>
+                        <th></th>
+                        <th>Grand Total</th>
+                        <th>{{cart.grandTotal}}</th>
+                        <th></th>
                     </tr>
-                </div>
-            </div>
+                </table>
 
-            <a href="<spring:url value="/productList" /> ">Continue Shopping</a>
+                <a href="<spring:url value="/productList" />" class="btn btn-default">Continue Shopping</a>
+            </div>
         </section>
+
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<script src="<c:url value="/resources/js/controller.js" /> "></script>
 <%@include file="/WEB-INF/views/template/footer.jsp" %>
