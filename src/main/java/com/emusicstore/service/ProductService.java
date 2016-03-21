@@ -1,13 +1,13 @@
-package com.emusicstore.dao;
+package com.emusicstore.service;
 
 import com.emusicstore.model.Product;
 
 import java.util.List;
 
 /**
- * Created by maro on 17/03/16.
+ * Created by maro on 21/03/16.
  */
-public interface ProductDao {
+public interface ProductService {
 
     List<Product> getProductList();
 
