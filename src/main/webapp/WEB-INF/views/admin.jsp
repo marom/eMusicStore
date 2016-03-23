@@ -22,7 +22,7 @@
             </h2>
         </c:if>
     <h3>
-        <a href="<c:url value="/admin/productInventory" /> " >Product Inventory</a>
+        <a href="<c:url value="/admin/productInventory" />" >Product Inventory</a>
     </h3>
 
     <p>Here you can view, check, modify the product inventory!</p>

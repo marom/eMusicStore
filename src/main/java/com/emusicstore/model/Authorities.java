@@ -14,7 +14,7 @@ public class Authorities {
     @GeneratedValue
     private int authoritiesId;
     private String username;
-    private String password;
+    private String authority;
 
     public int getAuthoritiesId() {
         return authoritiesId;
@@ -32,11 +32,11 @@ public class Authorities {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getAuthority() {
+        return authority;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setAuthority(String authority) {
+        this.authority = authority;
     }
 }
