@@ -16,7 +16,7 @@
             <p class="lead">Fill the below information to add a product:</p>
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/admin/productInventory/editProduct"
+        <form:form action="${pageContext.request.contextPath}/admin/product/editProduct"
                    method="post"
                    commandName="product"
                    enctype="multipart/form-data" >
