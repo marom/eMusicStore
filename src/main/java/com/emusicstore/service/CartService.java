@@ -1,11 +1,12 @@
-package com.emusicstore.dao;
+package com.emusicstore.service;
 
 import com.emusicstore.model.Cart;
 
 /**
- * Created by maro on 19/03/16.
+ * Created by maro on 23/03/16.
  */
-public interface CartDao {
+
+public interface CartService {
 
     Cart getCartById(int cartId);
 
