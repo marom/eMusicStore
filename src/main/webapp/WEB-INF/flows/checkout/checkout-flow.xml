@@ -12,7 +12,7 @@
     </action-state>
     
     <view-state id="collectCustomerInfo" view="collectCustomerInfo.jsp" model="order">
-        <transition on="customerInfoCollected" to="colletctShippingDetail" />
+        <transition on="customerInfoCollected" to="collectShippingDetail" />
     </view-state>
 
     <view-state id="collectShippingDetail" view="collectShippingDetail.jsp" model="order">
