@@ -9,6 +9,16 @@
 <%@taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
+<script>
+    $(document).ready(function() {
+
+        $('.table').DataTable({
+            "lengthMenu" : [[1,3,5,10,-1], [1,3,5,10,"All"]]
+        });
+    });
+</script>
+
+
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
