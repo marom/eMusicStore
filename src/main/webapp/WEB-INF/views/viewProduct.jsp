@@ -9,6 +9,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
+
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
@@ -42,7 +43,7 @@
 
                     <c:set var="role" scope="page" value="${param.role}" />
                     <c:set var="url" scope="page" value="/product/productList" />
-                    <c:if test="${role=='admin'}">
+                    <c:if test="${role='admin'}">
                         <c:set var="url" scope="page" value="/admin/productInventory" />
                     </c:if>
 
@@ -50,7 +51,8 @@
                         <a href="<c:url value="${url}" />" class="btn btn-default">Back</a>
                         <a href="#" class="btn btn-warning btn-large"
                            ng-click="addToCart('${product.productId}')"><span
-                                class="glyphicon glyphicon-shopping-cart"></span>Order Now</a>
+                                class="glyphicon glyphicon-shopping-cart"></span>Order
+                            Now</a>
                         <a href="<spring:url value="/cart" />"
                            class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span>View Cart</a>
                     </p>
@@ -62,4 +64,3 @@
 
         <script src="<c:url value="/resources/js/controller.js" /> "></script>
         <%@include file="/WEB-INF/views/template/footer.jsp" %>
-
